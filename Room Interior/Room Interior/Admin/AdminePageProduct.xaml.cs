@@ -124,6 +124,7 @@ namespace Room_Interior.Admin
             if(LvProduct.SelectedValue!=null)
             {
                 var item = (Product)LvProduct.SelectedItem;
+                Class.productSave = item;
                 AdminAddProduct addProd = new AdminAddProduct(item.IdProduct);
                 addProd.Show();
             }

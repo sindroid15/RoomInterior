@@ -84,21 +84,24 @@ namespace Room_Interior.Admin
 
         private void btnSaveProduct_Click(object sender, RoutedEventArgs e)
         {
-
-            RoomInteriorEntities1 db = new RoomInteriorEntities1();
             var result = MessageBox.Show("Вы хотите добавить материал?","Подтверждение",MessageBoxButton.YesNo);
-            Product prodAdd = new Product();
 
-            prodAdd.NameProduct = tbNameProduct.Text;
-            prodAdd.IdCategory = cmbChangeCategoryProduct.SelectedIndex + 1;
-            prodAdd.Price = decimal.Parse(tbInputPrice.Text);
-            prodAdd.Material = tbInputMaterialProduct.Text;
-            prodAdd.Description = tbInputDescription.Text;
-            prodAdd.PhotoProduct = null;
-            
-            db.Product.Add(prodAdd);
-            db.SaveChanges();
-            MessageBox.Show("Товар успешно добавлен", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (Class.productSave != null)
+            {
+                Class.dbEditorProduct(tbNameProduct.Text, cmbChangeCategoryProduct.SelectedIndex + 1, decimal.Parse(tbInputPrice.Text), tbInputMaterialProduct.Text, tbInputDescription.Text);
+            }
+            else
+            {
+                Class.productSave.NameProduct = tbNameProduct.Text;
+                Class.productSave.IdCategory = cmbChangeCategoryProduct.SelectedIndex + 1;
+                Class.productSave.Price = decimal.Parse(tbInputPrice.Text);
+                Class.productSave.Material = tbInputMaterialProduct.Text;
+                Class.productSave.Description = tbInputDescription.Text;
+                Class.productSave.PhotoProduct = null;
+                Class.db.Product.Add(Class.productSave);
+                Class.db.SaveChanges();
+                MessageBox.Show("Товар успешно добавлен", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 
         }
 
