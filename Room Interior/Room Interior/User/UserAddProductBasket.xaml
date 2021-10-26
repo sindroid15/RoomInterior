@@ -1,0 +1,54 @@
+﻿<Window x:Class="Room_Interior.User.UserAddProductBasket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Room_Interior.User"
+        mc:Ignorable="d"
+        Title="UserAddProductBasket" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="140"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Выберите категорию товара: "/>
+            <ComboBox x:Name="cmbChangeCategoryProduct"
+                      SelectedIndex="0"
+                      SelectionChanged="cmbChangeCategoryProduct_SelectionChanged"/>
+            <TextBlock Text="Выберите название товара: "/>
+            <ComboBox x:Name="cmbNameProduct"
+                      SelectedIndex="0"
+                      SelectionChanged="cmbNameProduct_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button x:Name="btnAddBasket" 
+                    Content="Добавить в корзину"
+                    Style="{StaticResource ButtoneOne}"
+                    Click="btnAddBasket_Click"/>
+            <Button x:Name="btnExitWindow"
+                    Content="Закрыть окно"
+                    Style="{StaticResource ButtoneOne}"
+                    Click="btnExitWindow_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Room Interior"/>
+            <Image Source="logo.png" 
+                   Height="50"/>
+        </StackPanel>
+        <Frame x:Name="frmUserAddProductBasket"/>
+    </Grid>
+</Window>

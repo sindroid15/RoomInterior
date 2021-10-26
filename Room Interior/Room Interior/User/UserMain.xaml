@@ -1,0 +1,61 @@
+﻿<Window x:Class="Room_Interior.User.UserMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Room_Interior.User"
+        mc:Ignorable="d"
+        Title="UserMain" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" 
+                    Orientation="Vertical"
+                    Background="#00ADB5" 
+                    VerticalAlignment="Center">
+            <Button x:Name="ProfileButton" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top" 
+                    Height="22" 
+                    ToolTip="Нажмите для изменения логина и пароля" 
+                    Click="ProfileButton_Click">
+                <Button.Content>
+                    <Image Source="logo.png" Width="50"/>
+                </Button.Content>
+            </Button>
+            <Button x:Name="btnListProduct" 
+                    Content="Товары" 
+                    Click="btnListProduct_Click" 
+                    Style="{StaticResource ButtoneOne}"/>
+            <Button x:Name="btnListBasket" 
+                    Content="Корзина" 
+                    Click="btnListBasket_Click" 
+                    Style="{StaticResource ButtoneOne}"/>
+            <Button x:Name="btnListExitProfile" 
+                    Content="Выйти из профиля" 
+                    Click="btnListExitProfile_Click" 
+                    Style="{StaticResource ButtoneOne}"/>
+            <Button x:Name="btnListCloseApp" 
+                    Content="Закрыть приложение" 
+                    Click="btnListCloseApp_Click" 
+                    Style="{StaticResource ButtoneOne}"/>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" 
+                    Orientation="Vertical" 
+                    VerticalAlignment="Bottom">
+            <TextBlock Text="Room Interior" 
+                       HorizontalAlignment="Center"/>
+            <Image Source="logo.png" 
+                   Width="200" 
+                   VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Frame x:Name="frmMainUser" 
+                   Margin="0,0,30,0"/>
+        </Grid>
+    </Grid>
+</Window>
