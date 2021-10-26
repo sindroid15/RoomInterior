@@ -68,6 +68,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Manager\ManagerPageProduct.xaml.cs">
+      <DependentUpon>ManagerPageProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User\UserAddProductBasket.xaml.cs">
       <DependentUpon>UserAddProductBasket.xaml</DependentUpon>
     </Compile>
@@ -140,9 +143,6 @@
     </Compile>
     <Compile Include="Helper\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Manager\ManagerPageProduct.xaml.cs">
-      <DependentUpon>ManagerPageProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\ManagerPageUserOrder.xaml.cs">
       <DependentUpon>ManagerPageUserOrder.xaml</DependentUpon>
