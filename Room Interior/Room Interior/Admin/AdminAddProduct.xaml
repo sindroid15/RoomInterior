@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Room_Interior.Admin"
         mc:Ignorable="d"
+         Icon="C:\Users\sindr\Desktop\01.09.21-30.12.21\Бастрыкина 01.02\Room Interior\Room Interior\Room Interior\Resources\logo.png"
         Title="AdminAddProduct" Height="650" Width="400">
     <Grid>
         <Grid.RowDefinitions>

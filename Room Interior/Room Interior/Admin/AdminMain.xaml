@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Room_Interior.Admin"
         mc:Ignorable="d"
-        Title="AdminMain" Height="450" Width="800">
+        Icon="C:\Users\sindr\Desktop\01.09.21-30.12.21\Бастрыкина 01.02\Room Interior\Room Interior\Room Interior\Resources\logo.png"
+        Title="Room Interiror" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
